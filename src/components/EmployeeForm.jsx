@@ -47,7 +47,7 @@ export default function EmployeeForm({ addEmployee }) {
 
       <input
         type="text"
-        placeholder="Département"
+        placeholder="Departement"
         value={department}
         onChange={(e) => setDepartment(e.target.value)}
         required
