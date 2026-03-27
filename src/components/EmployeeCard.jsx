@@ -22,7 +22,7 @@ const EmployeeCard = ({ employee }) => {
             <span className="detail-value">{position}</span>
           </div>
           <div className="detail-item">
-            <span className="detail-label">Département</span>
+            <span className="detail-label">Departement</span>
             <span className="detail-value">{department}</span>
           </div>
         </div>
