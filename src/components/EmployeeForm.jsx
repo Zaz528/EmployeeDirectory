@@ -17,6 +17,7 @@ export default function EmployeeForm({ addEmployee }) {
       department: department,
       status: "Actif",     
     };
+    
 
     addEmployee(newEmployee);
 
