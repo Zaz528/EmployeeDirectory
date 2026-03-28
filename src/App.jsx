@@ -1,13 +1,41 @@
+import { useState } from "react";
+import EmployeeForm from "./components/EmployeeForm";
+import EmployeeList from "./components/EmployeeList";
 
-import './App.css'
+ function App() {
+  // State pour stocker les employés
+  const [employees, setEmployees] = useState([
+    {
+      id: 1,
+      name: "Jean Paul",
+      position: "Développeur",
+      department: "IT",
+      status: "Actif",
+    },
+    {
+      id: 2,
+      name: "Marie Claude",
+      position: "Manager",
+      department: "RH",
+      status: "Inactif",
+    }
+  ]);
 
-function App() {
+  // Fonction pour ajouter un nouvel employé
+  const addEmployee = (newEmployee) => {
+    setEmployees([...employees, newEmployee]);
+  };
+
   return (
-    <div className="App">
-      <h1>Welcome to My React App!</h1>
-      <p>This is a simple React application.</p>
-    </div>
-  )
-}
+    <div className="app-container">
+      <h1>Liste des employés</h1>
 
-export default App
+      {/* Liste des employés */}
+      <EmployeeList employees={employees} />
+
+      {/* Formulaire pour ajouter un employé */}
+      <EmployeeForm addEmployee={addEmployee} />
+    </div>
+  );
+}
+export default App;
