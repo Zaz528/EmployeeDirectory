@@ -7,7 +7,7 @@ import EmployeeList from "./components/EmployeeList";
   const [employees, setEmployees] = useState([
     {
       id: 1,
-      name: "Jean Pierre",
+      name: "Jean Paul",
       position: "Développeur",
       department: "IT",
       status: "Actif",
