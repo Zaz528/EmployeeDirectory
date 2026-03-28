@@ -3,7 +3,6 @@ import EmployeeForm from "./components/EmployeeForm";
 import EmployeeList from "./components/EmployeeList";
 
  function App() {
-  // State pour stocker les employés
   const [employees, setEmployees] = useState([
     {
       id: 1,
