@@ -12,6 +12,38 @@
   gap: 0.5rem;
 }
 
+.employee-form label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.employee-form input, 
+.employee-form select {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #1e293b;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  width: 100%;
+  outline: none;
+}
+
+.employee-form input:focus, 
+.employee-form select:focus {
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.employee-form input::placeholder {
+  color: #94a3b8;
+}
+
 /* Hiérarchie visuelle : labels plus petits et plus foncés */
 .employee-form label {
   font-size: 0.875rem;
@@ -54,6 +86,7 @@
   font-weight: 700;
   color: #ffffff;
   background-color: #3b82f6; /* Bleu d'accentuation */
+  background-color: #3b82f6; 
   border: none;
   border-radius: 8px;
   cursor: pointer;
