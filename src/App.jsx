@@ -1,30 +1,23 @@
 import { useState } from "react";
 import EmployeeForm from "./components/EmployeeForm";
 import EmployeeList from "./components/EmployeeList";
+import { initialEmployees } from "./data/employees"; // Importation des données isolées
 import "./App.css";
 
-
+/**
+ * App Component - Version Ultra-Clean
+ * 
+ * Ce composant ne sert que de chef d'orchestre :
+ * - Il gère l'état global (State)
+ * - Il assemble les composants principaux
+ * - Il n'y a plus de logique métier ou de données brutes ici.
+ */
 function App() {
-  const [employees, setEmployees] = useState([
-    {
-      id: 1,
-      name: "Jean Paul",
-      position: "Développeur Senior",
-      department: "Ingénierie",
-      status: "Actif",
-    },
-    {
-      id: 2,
-      name: "Marie Claude",
-      position: "Product Manager",
-      department: "Produit",
-      status: "Inactif",
-    }
-  ]);
+  const [employees, setEmployees] = useState(initialEmployees);
 
+  // Logique d'ajout simplifiée
   const addEmployee = (newEmployee) => {
-    const employeeWithId = { ...newEmployee, id: Date.now() };
-    setEmployees([...employees, employeeWithId]);
+    setEmployees(prev => [...prev, { ...newEmployee, id: Date.now() }]);
   };
 
   return (
@@ -39,7 +32,7 @@ function App() {
       <main className="app-main">
         <div className="container">
           <div className="app-grid">
-            {/* Section Formulaire - Mise en avant pour l'ajout */}
+            {/* Formulaire - Section Sidebar */}
             <aside className="app-sidebar">
               <div className="section-card">
                 <h2 className="section-title">Nouvel Employé</h2>
@@ -47,7 +40,7 @@ function App() {
               </div>
             </aside>
 
-            {/* Section Liste - Zone principale d'affichage */}
+            {/* Liste - Section Contenu Principal */}
             <section className="app-content">
               <EmployeeList employees={employees} />
             </section>
@@ -56,7 +49,7 @@ function App() {
       </main>
       
       <footer className="app-footer">
-        <p>&copy; 2026 Entreprise RH - Workshop React & Git</p>
+        <p>&copy; 2026 Entreprise CloZaz - SA</p>
       </footer>
     </div>
   );
