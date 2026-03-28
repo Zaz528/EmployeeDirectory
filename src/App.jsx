@@ -1,12 +1,24 @@
 import { useState } from "react";
 import EmployeeForm from "./components/EmployeeForm";
 import EmployeeList from "./components/EmployeeList";
-import { initialEmployees } from "./data/employees"; // Importation des données isolées
-import "./App.css";
 
-
-function App() {
-  const [employees, setEmployees] = useState(initialEmployees);
+ function App() {
+  const [employees, setEmployees] = useState([
+    {
+      id: 1,
+      name: "Jean Paul",
+      position: "Développeur",
+      department: "IT",
+      status: "Actif",
+    },
+    {
+      id: 2,
+      name: "Marie Claude",
+      position: "Manager",
+      department: "RH",
+      status: "Inactif",
+    }
+  ]);
 
   // Logique d'ajout simplifiée
   const addEmployee = (newEmployee) => {

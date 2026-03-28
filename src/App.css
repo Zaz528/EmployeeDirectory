@@ -90,28 +90,8 @@ body {
   font-size: 0.875rem;
 }
 
-@media (max-width: 1024px) {
-  .app-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .app-sidebar {
-    order: 2; 
-  }
-  
-  .app-content {
-    order: 1;
-  }
+h2 {
+  margin-top: 40px;
+  color: #555;
 }
 
-@media (max-width: 640px) {
-  .app-header {
-    padding: 1.5rem 0;
-    margin-bottom: 1.5rem;
-  }
-  
-  .app-title {
-    font-size: 1.75rem;
-  }
-}
