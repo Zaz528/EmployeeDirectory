@@ -27,6 +27,7 @@ body {
   flex-direction: column;
 }
 
+/* Header moderne avec fond blanc et ombre légère */
 .app-header {
   background-color: var(--bg-card);
   padding: 2.5rem 0;
@@ -60,6 +61,7 @@ body {
   padding: 0 1.5rem;
 }
 
+/* Grille pour séparer Formulaire et Liste */
 .app-grid {
   display: grid;
   grid-template-columns: 350px 1fr;
@@ -90,3 +92,29 @@ body {
   font-size: 0.875rem;
 }
 
+/* Responsive - Adaptation pour tablettes et mobiles */
+@media (max-width: 1024px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .app-sidebar {
+    order: 2; /* Formulaire après la liste sur mobile */
+  }
+  
+  .app-content {
+    order: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .app-title {
+    font-size: 1.75rem;
+  }
+}

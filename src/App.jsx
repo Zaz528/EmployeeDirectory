@@ -1,24 +1,19 @@
 import { useState } from "react";
 import EmployeeForm from "./components/EmployeeForm";
 import EmployeeList from "./components/EmployeeList";
+import { initialEmployees } from "./data/employees"; // Importation des données isolées
+import "./App.css";
 
- function App() {
-  const [employees, setEmployees] = useState([
-    {
-      id: 1,
-      name: "Jean Paul",
-      position: "Développeur",
-      department: "IT",
-      status: "Actif",
-    },
-    {
-      id: 2,
-      name: "Marie Claude",
-      position: "Manager",
-      department: "RH",
-      status: "Inactif",
-    }
-  ]);
+/**
+ * App Component - Version Ultra-Clean
+ * 
+ * Ce composant ne sert que de chef d'orchestre :
+ * - Il gère l'état global (State)
+ * - Il assemble les composants principaux
+ * - Il n'y a plus de logique métier ou de données brutes ici.
+ */
+function App() {
+  const [employees, setEmployees] = useState(initialEmployees);
 
   // Logique d'ajout simplifiée
   const addEmployee = (newEmployee) => {
